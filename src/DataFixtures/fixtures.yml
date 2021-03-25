@@ -1,0 +1,25 @@
+App\Entity\Department:
+    department_1:
+        name: "Human Resources"
+        bonusConstant: 100
+        bonusPercentage: null
+    department_2:
+        name: "Customer Service"
+        bonusConstant: null
+        bonusPercentage: 10
+
+App\Entity\Employee:
+    employee_1:
+        firstName: Adam
+        lastName: Kowalski
+        salary: 1000
+        bonusType: 2
+        hiredAt: '<(new DateTime("2006-01-01"))>'
+        department: '@department_1'
+    employee_2:
+        firstName: Ania
+        lastName: Nowak
+        salary: 1100
+        bonusType: 1
+        hiredAt: '<(new DateTime("2016-01-01"))>'
+        department: '@department_2'
