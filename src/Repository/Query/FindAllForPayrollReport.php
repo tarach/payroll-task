@@ -20,6 +20,7 @@ class FindAllForPayrollReport
     public function __construct(EmployeeRepository $employeeRepository)
     {
         $this->query = $employeeRepository->createQueryBuilder('e')
+            ->select('e', 'd')
             ->leftJoin('e.department', 'd')
         ;
     }
